@@ -20,6 +20,9 @@ import { Book } from './books/entities/book.entity';
       username: process.env.DB_USERNAME,
       password: process.env.DB_PASS,
       database: process.env.DB_NAME,
+      ssl: {
+        rejectUnauthorized: false
+      },
       entities: [Book],
       synchronize: true,
     }),
